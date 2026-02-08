@@ -1,0 +1,44 @@
+[
+  {
+    "id": "general",
+    "name": "Medicina General",
+    "keywords": ["fiebre", "malestar", "cansancio", "síntomas generales", "dolor leve"],
+    "description": "Atención primaria para evaluación inicial y manejo general."
+  },
+  {
+    "id": "neurologia",
+    "name": "Neurología",
+    "keywords": ["dolor de cabeza", "cefalea", "migraña", "mareo", "pérdida de fuerza"],
+    "description": "Trastornos del sistema nervioso central y periférico."
+  },
+  {
+    "id": "cardiologia",
+    "name": "Cardiología",
+    "keywords": ["dolor en el pecho", "palpitaciones", "dificultad para respirar", "opresión torácica"],
+    "description": "Evaluación y manejo de enfermedades del corazón y circulación."
+  },
+  {
+    "id": "otorrino",
+    "name": "Otorrinolaringología",
+    "keywords": ["dolor de garganta", "tos", "sinusitis", "problemas para respirar leve"],
+    "description": "Trastornos de oído, nariz y garganta."
+  },
+  {
+    "id": "dermatologia",
+    "name": "Dermatología",
+    "keywords": ["erupción", "picazón", "mancha en la piel", "acné"],
+    "description": "Enfermedades de la piel, uñas y cabello."
+  },
+  {
+    "id": "alergologia",
+    "name": "Alergología",
+    "keywords": ["alergia", "estornudos", "urticaria", "reacción alérgica"],
+    "description": "Diagnóstico y tratamiento de alergias."
+  },
+  {
+    "id": "psicologia",
+    "name": "Psicología",
+    "keywords": ["estrés", "ansiedad", "depresión", "malestar emocional"],
+    "description": "Apoyo psicológico y manejo de salud mental."
+  }
+]

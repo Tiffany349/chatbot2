@@ -1,0 +1,11 @@
+[
+  { "id": "horarios", "question": "¿Cuáles son los horarios de atención?", "answer": "Lunes a viernes 08:00 a 18:00, sábados 08:00 a 12:00." },
+  { "id": "agendar", "question": "¿Cómo agendo una cita médica?", "answer": "Puedes agendar por teléfono, en recepción o mediante nuestro portal en línea. Indica especialidad, motivo y preferencia de horario." },
+  { "id": "urgencias", "question": "¿Se atienden urgencias?", "answer": "Atendemos urgencias básicas. En casos graves, dirigirse al servicio de emergencias más cercano." },
+  { "id": "documentos", "question": "¿Qué documentos necesito para registrarme?", "answer": "Identificación oficial, comprobante de domicilio y datos del seguro si aplica." },
+  { "id": "seguros", "question": "¿La clínica acepta seguros privados?", "answer": "Aceptamos la mayoría de seguros privados. Consulta la lista actualizada en recepción." },
+  { "id": "especialidades", "question": "¿Qué especialidades médicas ofrecen?", "answer": "Contamos con medicina general, pediatría, ginecología, cardiología, dermatología y más." },
+  { "id": "resultados", "question": "¿Cómo puedo obtener mis resultados de laboratorio?", "answer": "Puedes recogerlos en recepción o acceder a ellos a través de nuestro portal en línea con tu cuenta registrada." },
+  { "id": "cancelar", "question": "¿Cómo cancelo o reprogramo una cita?", "answer": "Puedes cancelar o reprogramar llamando al número de atención o a través de nuestro portal en línea con tu cuenta registrada." },
+  {"id": "saludar", "question": "Hola, ¿cómo estás?", "answer": "¡Hola! Estoy aquí para ayudarte con cualquier pregunta que tengas sobre nuestros servicios médicos. ¿En qué puedo asistirte hoy?" }
+]
