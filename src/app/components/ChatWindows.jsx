@@ -2,27 +2,27 @@
 import React, { useState } from "react";
 import MessageList from "./MessageList";
 import MessageInput from "./MessageInput";
-import { classifyMessage } from "../services/classifier";
+import { useChat } from "../hooks/useChat";
 
-export default function ChatWindow() {
-  const [messages, setMessages] = useState([
-    { id: 1, sender: "bot", text: "Hola, soy el asistente de la clínica. ¿En qué puedo ayudarte hoy?" }
-  ]);
+export default function ChatWindows() {
+  const { messages, isLoading, sendUserMessage } = useChat();
+  const [input, setInput] = useState("");
 
-  const sendUserMessage = async (text) => {
-    if (!text || !text.trim()) return;
-    const userMsg = { id: Date.now(), sender: "user", text: text.trim() };
-    setMessages((m) => [...m, userMsg]);
-
-    const reply = await classifyMessage(text.trim());
-    const botMsg = { id: Date.now() + 1, sender: "bot", text: reply };
-    setMessages((m) => [...m, botMsg]);
+  const handleSend = () => {
+    if (input.trim()) {
+      sendUserMessage(input);
+      setInput("");
+    }
   };
 
   return (
     <div className="chat-window">
-      <MessageList messages={messages} />
-      <MessageInput onSend={sendUserMessage} />
+      <MessageList messages={messages} isLoading={isLoading} />
+      <MessageInput
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        onSend={handleSend}
+      />
     </div>
   );
 }

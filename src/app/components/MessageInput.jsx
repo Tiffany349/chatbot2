@@ -1,32 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 
-export default function MessageInput({ onSend }) {
-  const [value, setValue] = useState("");
-
-  const handleSend = () => {
-    if (!value.trim()) return;
-    onSend(value);
-    setValue("");
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSend();
+export default function MessageInput({ value, onChange, onSend }) {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      onSend();
     }
   };
 
   return (
-    <div className="message-input">
-      <textarea
+    <div className="input-area">
+      <input
+        type="text"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
-        onKeyDown={handleKeyDown}
-        placeholder="Describe tus síntomas o pregunta"
-        rows={2}
+        onChange={onChange}
+        onKeyPress={handleKeyPress}
+        placeholder="Escribe tu mensaje..."
       />
-      <button onClick={handleSend}>Enviar</button>
+      <button onClick={onSend}>Enviar</button>
     </div>
   );
 }
