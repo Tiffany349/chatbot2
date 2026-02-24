@@ -6,12 +6,19 @@ export default function MessageList({ messages, isLoading }) {
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, isLoading]);
 
   return (
     <div className="message-list" role="log" aria-live="polite">
       {messages.map((m) => (
         <div key={m.id} className={`message ${m.sender}`}>
+          
+          {/* Avatar */}
+          <div className="avatar">
+            {m.sender === "bot" ? "🤖" : "👤"}
+          </div>
+
+          {/* Burbuja */}
           <div className="bubble">
             <strong className="sender">
               {m.sender === "bot" ? "Asistente" : "Tú"}
@@ -23,9 +30,15 @@ export default function MessageList({ messages, isLoading }) {
 
       {isLoading && (
         <div className="message bot">
+          <div className="avatar">🤖</div>
+
           <div className="bubble">
             <strong className="sender">Asistente</strong>
-            <div className="text">⏳ Pensando...</div>
+            <div className="typing">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </div>
       )}
