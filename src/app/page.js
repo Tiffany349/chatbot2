@@ -1,5 +1,7 @@
 import ChatWindow from "./components/ChatWindows";
 
+console.log("TOKEN:", process.env.HF_API_KEY);
+
 export default function Page() {
   return (
     <main>
